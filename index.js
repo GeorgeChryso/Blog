@@ -35,6 +35,8 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 app.set('view engine','ejs') //ANY FILE ENDING WITH .ejs should be rendered with ejs
 app.use(express.static('public'))
+
+
 let port = process.env.PORT;
 if (port == null || port == "") {
     port = 4000;
@@ -43,6 +45,7 @@ console.log(port)
 app.listen(port, ()=>{
     console.log('App listening...')
 })
+
 
 // cookies in the browser
 ///configuration object with a value to secret property. secret string is
