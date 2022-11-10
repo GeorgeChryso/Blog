@@ -39,6 +39,7 @@ let port = process.env.PORT;
 if (port == null || port == "") {
     port = 4000;
 }
+console.log(port)
 app.listen(port, ()=>{
     console.log('App listening...')
 })
