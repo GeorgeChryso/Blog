@@ -16,6 +16,7 @@ const ejs = require('ejs')
 const mongoose = require('mongoose');
 //parameters are (host, database name)
 //<------------------this needs UPDATE
+require("dotenv").config()
 const mongoKey=''+process.env.mkey
 mongoose.connect('mongodb+srv://scotoma:'+mongoKey+'@mdbclus1.dmodp7g.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true})
 
@@ -43,7 +44,6 @@ let port = process.env.PORT;
 if (port == null || port == "") {
     port = 4000;
 }
-console.log(port)
 app.listen(port, ()=>{
     console.log('App listening...')
 })
